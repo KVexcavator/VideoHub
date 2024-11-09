@@ -1,0 +1,73 @@
+https://appwrite.io/
+Создайте весь свой бэкэнд за считанные минуты и масштабируйте без усилий, используя платформу Appwrite с открытым исходным кодом. Добавьте аутентификацию, базы данных, функции, хранилище и обмен сообщениями в свои проекты, используя фреймворки и языки по вашему выбору.
+
+Sign up with GitHub
+
+Organization name: KVexcavator
+
+create new progect: test-aora
+Add a platform: react native
+Package name registration:
+- name: first-test
+- package name: com.kvexcavator.test.react.native
+
+skip upupropriate steps
+test-aura copy
+project id: 672eefe8000ba24b77bf
+
+app.json
+ios || androin ?
+"package": "com.kvexcavator.test.react.native"
+
+mkdir lib && cd lib
+touch appwrite.js
+
+
+===========================
+DATABASE
+create database: react_native_test
+bd id: 672ef9060013d5270545
+create db collection: users
+bd users id: 672ef987000fcc9fc3cf
+atributes:
+tString username 2200 required
+tEmail email required
+tUrl avatar require
+tStrind accountid 2200 required
+setting:
+permissions - any, allCRUD
+-----------------------------
+create db collection: video
+bd video id: 672efa20003053af20ba
+atributes:
+tString title 2200 required
+tURL thumbnail required
+tString prompt 5000 required
+tURL video required
+tRelationship
+  one-way
+  Related Collection users
+  Relation Many to one
+  Attribute Key creator
+  On deleting a document set document NULL
+setting:
+permissions - all users, allCRUD
+================================
+STORAGE
+create bucket
+name: files
+bucket id: 672f03250032e4b5ead4
+setting:
+permissions
+  all users, allCRUD
+  all guests, read
+Maximum file size - 50 mgbt
+Maximum file size - jpg,png,gif,mp4
+==================================
+https://github.com/appwrite/sdk-for-react-native
+npx expo install react-native-appwrite react-native-url-polyfill
+npm react-native-appwrite
+https://www.npmjs.com/package/react-native-appwrite/v/0.2.1
+
+
+admin@admin.local, 12345678, admin
